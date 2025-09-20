@@ -19,7 +19,7 @@ export default function TambahUserPages() {
     const addUser = async(e) => {
         e.preventDefault()
         try {
-            const response = await axios.post("http://localhost:3000/api/add-user", {
+            const response = await axios.post("https://usermanagement-api.vercel.app/api/add-users", {
                 nama: nama,
                 email: email,
                 nomorTelepon: noTelp,

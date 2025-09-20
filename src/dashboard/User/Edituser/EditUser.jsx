@@ -20,7 +20,7 @@ export default function EditUserPages() {
     useEffect(() => {
         const getuserById = async() => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/users/${id}`);
+                const response = await axios.get(`https://usermanagement-api.vercel.app/api/users/${id}`);
                 const {nama, email, nomorTelepon, statusAktif, departemen} = response.data.data;
 
                 setNama(nama);
@@ -39,7 +39,7 @@ export default function EditUserPages() {
     const UpdateUser = async(e) => {
         e.preventDefault();
         try {
-            const response = await axios.put(`http://localhost:3000/api/update-user/${id}`, {
+            const response = await axios.put(`https://usermanagement-api.vercel.app/api/update-user/${id}`, {
                 nama: nama,
                 email: email,
                 nomorTelepon: noTelp,

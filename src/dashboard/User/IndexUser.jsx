@@ -21,7 +21,7 @@ export default function IndexUserPages() {
 
     const getUsers = async() => {
         try {
-            const response = await axios.get("http://localhost:3000/api/users");
+            const response = await axios.get("https://usermanagement-api.vercel.app/api/users");
             setUsers(response.data.data);
         } catch(error) {
             console.error("Error : ", error);
@@ -30,7 +30,7 @@ export default function IndexUserPages() {
 
     const deleteUser = async(id_user) => {
         try {
-            const response = await axios.delete(`http://localhost:3000/api/delete-user/${id_user}`);
+            const response = await axios.delete(`https://usermanagement-api.vercel.app/api/delete-user/${id_user}`);
 
             setMessage(response.data.message);
             setShowModal(true);
